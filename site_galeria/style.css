@@ -1,56 +1,67 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui a borda e o padding no tamanho total dos elementos */
 }
-body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-image: linear-gradient(to top, #0D0D0D, #686673, #0D0D0D);
-    width: 100vw;
-    height: 100vh;
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Define a família de fontes do corpo */
+    background-color: #0d0d0dbe; /* Define a cor de fundo do body */
+    width: 100%; /* Define a largura do body como 100% da largura da viewport */
+    height: 100vh; /* Define a altura do body como 100% da altura da viewport */
+    overflow-x: hidden; /* Remove a rolagem horizontal */
 }
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+
+.container {
+    display: flex; /* Define o layout flexível */
+    align-items: center; /* Alinha os itens ao centro no eixo vertical */
+    justify-content: center; /* Alinha os itens ao centro no eixo horizontal */
+    flex-direction: column; /* Organiza os itens em uma coluna */
 }
-.text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0D0D0D;
-    height: 90px;
-    width: 100vw;
-    padding: 35px;
-    text-align: center;
+
+.text {
+    display: flex; /* Define o layout flexível */
+    justify-content: center; /* Alinha os itens ao centro no eixo horizontal */
+    align-items: center; /* Alinha os itens ao centro no eixo vertical */
+    background-color: #0D0D0D; /* Define a cor de fundo do texto */
+    height: 90px; /* Define a altura da caixa de texto */
+    width: 100%; /* Define a largura da caixa de texto */
+    padding: 35px; /* Adiciona preenchimento interno */
+    text-align: center; /* Centraliza o texto */
 }
-h1{
-    font-size: 2.2rem;
-    color: white;
+
+h1 {
+    font-size: 2.2rem; /* Define o tamanho da fonte do título */
+    color: white; /* Define a cor do texto do título */
 }
-.galerry-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 2vw;
-    padding: 0 2vw;
+
+.galerry-container {
+    margin-top: 10px; /* Adiciona margem superior */
+    margin-bottom: 30px; /* Adiciona margem inferior */
+    width: 100%; /* Define a largura do contêiner da galeria */
+    display: flex; /* Define o layout flexível */
+    flex-wrap: wrap; /* Permite que os itens da galeria envolvam */
+    justify-content: space-evenly; /* Espaça os itens uniformemente */
+    gap: 2vw; /* Define o espaçamento entre os itens */
+    padding: 0 4vw; /* Adiciona preenchimento horizontal */
 }
-.galerry-items{
-    margin-top: 10px;
-    width: 260px;
-    height: 260px;
-    flex-grow: 1;
+
+.galerry-items {
+    width: 260px; /* Define a largura dos itens da galeria */
+    height: 260px; /* Define a altura dos itens da galeria */
+    flex-grow: 1; /* Permite que os itens cresçam para preencher o espaço */
 }
-.galerry-items img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.644);
-    transition: 0.6s ease-in-out;
+
+.galerry-items img {
+    width: 100%; /* Define a largura da imagem como 100% do contêiner pai */
+    height: 100%; /* Define a altura da imagem como 100% do contêiner pai */
+    object-fit: cover; /* Ajusta a imagem para cobrir toda a área do contêiner */
+    border-radius: 10px; /* Adiciona bordas arredondadas à imagem */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.644); /* Adiciona uma sombra à imagem */
+    transition: 0.6s ease-in-out; /* Adiciona uma transição suave */
 }
-.galerry-items img:hover{
-    transform: scale(1.05);
-    box-shadow: 10px 10px 15px black;
+
+.galerry-items img:hover {
+    transform: scale(1.05); /* Amplia a imagem ao passar o mouse */
+    box-shadow: 10px 10px 15px black; /* Aumenta a sombra ao passar o mouse */
 }

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* Define que todos os elementos usarão box-sizing: border-box, 
+   o que inclui o padding e a borda nas medidas de largura e altura. */
+   * {
+    box-sizing: border-box;
+}
+
+/* Estiliza o corpo da página. */
+body {
+    font-family: 'Roboto', sans-serif; /* Define a fonte principal da página. */
+    margin: 0; /* Remove a margem padrão do corpo. */
+    display: flex; /* Define o corpo como um container flexível. */
+    align-items: center; /* Centraliza os itens verticalmente. */
+    justify-content: center; /* Centraliza os itens horizontalmente. */
+    height: 100vh; /* Define a altura do corpo como 100% da altura da janela de visualização. */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa os limites da janela. */
+}
+
+/* Estiliza o container principal. */
+.container {
+    display: flex; /* Define o container como um container flexível. */
+    width: 90vw; /* Define a largura do container como 90% da largura da janela de visualização. */
+}
+
+/* Estiliza cada painel dentro do container. */
+.panel {
+    background-size: cover; /* Faz com que a imagem de fundo cubra todo o painel. */
+    background-position: center; /* Centraliza a imagem de fundo. */
+    background-repeat: no-repeat; /* Evita a repetição da imagem de fundo. */
+    height: 80vh; /* Define a altura dos painéis como 80% da altura da janela de visualização. */
+    border-radius: 70px; /* Arredonda os cantos dos painéis. */
+    color: white; /* Define a cor do texto como branco. */
+    cursor: pointer; /* Define o cursor como ponteiro para indicar que o painel é clicável. */
+    flex: 0.5; /* Configura a flexibilidade dos painéis. */
+    margin: 10px; /* Adiciona uma margem ao redor dos painéis. */
+    position: relative; /* Define a posição relativa para permitir o posicionamento absoluto dos elementos filhos. */
+    transition: flex 0.7s ease-in; /* Adiciona uma transição suave na flexibilidade dos painéis. */
+}
+
+/* Estiliza o cabeçalho dentro dos painéis. */
+.panel h3 {
+    font-size: 24px; /* Define o tamanho da fonte do cabeçalho. */
+    position: absolute; /* Posiciona o cabeçalho de forma absoluta dentro do painel. */
+    bottom: 20px; /* Alinha o cabeçalho a 20 pixels do fundo do painel. */
+    left: 35px; /* Alinha o cabeçalho a 35 pixels da borda esquerda do painel. */
+    margin: 0; /* Remove a margem padrão do cabeçalho. */
+    opacity: 0; /* Define a opacidade inicial como 0, tornando o cabeçalho invisível. */
+}
+
+/* Estiliza os painéis quando estão ativos. */
+.panel.active {
+    flex: 5; /* Expande o painel ativo para ocupar mais espaço. */
+}
+
+/* Estiliza o cabeçalho dos painéis ativos. */
+.panel.active h3 {
+    opacity: 1; /* Torna o cabeçalho visível no painel ativo. */
+    /* Aplica uma transição suave para a propriedade de opacidade */
+transition: opacity 0.5s ease-in 0.5s;
+
+/*
+1. transition: Indica que estamos configurando uma transição.
+2. opacity: A propriedade CSS que será animada. Controla a transparência do elemento.
+   - 0 significa completamente transparente.
+   - 1 significa completamente opaco.
+3. 0.5s: A duração da transição. A mudança de opacidade levará 0.5 segundos para completar.
+4. ease-in: A função de temporização da transição. Indica que a transição começará lenta e
+   acelerará no final.
+5. 0.5s: O tempo de atraso antes de iniciar a transição. A transição começará 0.5 segundos após a mudança de estado.
+*/
+
+}
+
+/* Media query para telas com largura máxima de 480 pixels. */
+@media (max-width: 480px) {
+    .container {
+        width: 100vw; /* Ajusta a largura do container para 100% da largura da janela de visualização. */
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none; /* Oculta o quarto e o quinto painel em telas pequenas. */
+    }
+}

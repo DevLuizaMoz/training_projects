@@ -1,80 +1,88 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-body{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient(-135deg, #BF1774, #BF1B86, #04BFBF, #04BFAD,#F2F2F2 );
-    overflow: hidden;
+* {
+    margin: 0; /* Remove margens padrão de todos os elementos */
+    padding: 0; /* Remove preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui a borda e o padding no tamanho total dos elementos */
+    text-decoration: none; /* Remove decorações de texto padrão, como sublinhados */
 }
 
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 10vh;
-}
-.text{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 450px;
-    margin: 3vh;
-    border-radius: 20px;
-    padding: 35px;
-    text-align: center;
-    background-color: #f2f2f231;
-    border: 1px solid #f2f2f28a;
-}
-h1{
-    color: #f2f2f28a;
-    font-size: 2em;
-}
-.perfil{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    width: 220px;
-    height: 425px;
-    background-color: #f2f2f231;
-    border: 1px solid #f2f2f28a;
-    border-radius: 50px;
-    margin-bottom: 1vh;
-}
-.perfil img{
-    width: 180px;
-    border-radius: 50px;
-}
-.redes-sociais{
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0px 0px 5px;
-}
-.redes-sociais a{
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: #f2f2f231;
-    border: 1px solid #f2f2f28a;
-    transition: 0.3s ease;
-}
-.redes-sociais a i{
-    color: white;
-    font-size: 24px;
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Define a família de fontes do corpo */
+    width: 100vw; /* Define a largura do body como 100% da largura da viewport */
+    height: 100vh; /* Define a altura do body como 100% da altura da viewport */
+    background-image: linear-gradient(-135deg, #BF1774, #BF1B86, #04BFBF, #04BFAD, #F2F2F2); /* Aplica um gradiente linear como fundo */
+    overflow: hidden; /* Remove a rolagem */
 }
 
-.redes-sociais a:hover{
-    background-color: #BF1774;
-    transform: scale(1.1);
+.container {
+    display: flex; /* Define o layout flexível */
+    align-items: center; /* Alinha os itens ao centro no eixo vertical */
+    justify-content: center; /* Alinha os itens ao centro no eixo horizontal */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    margin: 10vh; /* Adiciona uma margem ao redor do contêiner */
+}
+
+.text {
+    display: flex; /* Define o layout flexível */
+    align-items: center; /* Alinha os itens ao centro no eixo vertical */
+    justify-content: center; /* Alinha os itens ao centro no eixo horizontal */
+    height: 50px; /* Define a altura da caixa de texto */
+    width: 450px; /* Define a largura da caixa de texto */
+    margin: 3vh; /* Adiciona uma margem ao redor da caixa de texto */
+    border-radius: 20px; /* Adiciona bordas arredondadas */
+    padding: 35px; /* Adiciona preenchimento interno */
+    text-align: center; /* Centraliza o texto */
+    background-color: #f2f2f231; /* Define uma cor de fundo com transparência */
+    border: 1px solid #f2f2f28a; /* Define a borda com uma cor e transparência */
+}
+
+h1 {
+    color: #f2f2f28a; /* Define a cor do texto do título */
+    font-size: 2em; /* Define o tamanho da fonte do título */
+}
+
+.perfil {
+    display: grid; /* Define o layout em grade */
+    align-items: center; /* Alinha os itens ao centro no eixo vertical */
+    justify-content: center; /* Alinha os itens ao centro no eixo horizontal */
+    width: 220px; /* Define a largura do contêiner do perfil */
+    height: 425px; /* Define a altura do contêiner do perfil */
+    background-color: #f2f2f231; /* Define a cor de fundo com transparência */
+    border: 1px solid #f2f2f28a; /* Define a borda com uma cor e transparência */
+    border-radius: 50px; /* Adiciona bordas arredondadas ao contêiner do perfil */
+    margin-bottom: 1vh; /* Adiciona uma margem inferior */
+}
+
+.perfil img {
+    width: 180px; /* Define a largura da imagem de perfil */
+    border-radius: 50px; /* Adiciona bordas arredondadas à imagem de perfil */
+}
+
+.redes-sociais {
+    display: flex; /* Define o layout flexível */
+    gap: 0.5rem; /* Define o espaçamento entre os itens */
+    align-items: center; /* Alinha os itens ao centro no eixo vertical */
+    justify-content: center; /* Alinha os itens ao centro no eixo horizontal */
+    margin: 10px 0px 0px 5px; /* Define as margens ao redor do contêiner de redes sociais */
+}
+
+.redes-sociais a {
+    width: 50px; /* Define a largura dos links das redes sociais */
+    height: 50px; /* Define a altura dos links das redes sociais */
+    display: flex; /* Define o layout flexível */
+    justify-content: center; /* Alinha os itens ao centro no eixo horizontal */
+    align-items: center; /* Alinha os itens ao centro no eixo vertical */
+    border-radius: 50%; /* Define bordas totalmente arredondadas */
+    background-color: #f2f2f231; /* Define a cor de fundo com transparência */
+    border: 1px solid #f2f2f28a; /* Define a borda com uma cor e transparência */
+    transition: 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.redes-sociais a i {
+    color: white; /* Define a cor dos ícones */
+    font-size: 24px; /* Define o tamanho da fonte dos ícones */
+}
+
+.redes-sociais a:hover {
+    background-color: #BF1774; /* Muda a cor de fundo ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho dos links das redes sociais ao passar o mouse */
 }

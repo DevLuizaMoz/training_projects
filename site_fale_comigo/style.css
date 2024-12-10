@@ -1,0 +1,101 @@
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui a borda e o padding no tamanho total dos elementos */
+}
+
+body {
+    width: 100%; /* Define a largura do body como 100% da viewport */
+    height: 100vh; /* Define a altura do body como 100% da altura da viewport */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Define a fonte padrão */
+    background-image: linear-gradient(135deg, #FE6A58, #FFA357); /* Define um gradiente de fundo */
+}
+
+.form {
+    position: relative; /* Define a posição relativa para permitir o uso de propriedades top e left */
+    top: 50%; /* Move o elemento 50% para baixo em relação ao topo do seu contêiner pai */
+    left: 50%; /* Move o elemento 50% para a direita em relação ao lado esquerdo do seu contêiner pai */
+    transform: translate(-50%, -50%); /* Move o elemento de volta para o centro do contêiner pai */
+    background-color: #FFFFFF; /* Define a cor de fundo como branco */
+    border-radius: 10px; /* Adiciona bordas arredondadas ao elemento */
+    padding: 60px; /* Adiciona preenchimento interno ao redor do conteúdo */
+    width: min-content; /* Define a largura mínima do conteúdo interno */
+    align-items: center; /* Centraliza o conteúdo ao longo do eixo vertical */
+    color: black; /* Define a cor do texto como preto */
+}
+
+.title {
+    font-size: 1.8em; /* Define o tamanho da fonte como 1.8 vezes o tamanho da fonte padrão */
+    margin-bottom: 10px; /* Adiciona uma margem inferior de 10px */
+    text-align: center;
+}
+.linha {
+    width: 96%; /* Define a largura da linha como 96% do contêiner pai */
+    height: 3px; /* Define a altura da linha como 3 pixels */
+    background-image: linear-gradient(135deg, #FE6A58, #FFA357); /* Define um gradiente de cor como fundo da linha */
+    margin: 4px; /* Adiciona uma margem de 4 pixels ao redor da linha */
+    border-radius: 4px; /* Adiciona bordas arredondadas com raio de 4 pixels */
+    transform-origin: center; /* Define o ponto de origem da transformação no centro da linha */
+    transform: scaleX(0); /* Inicia com escala horizontal de 0, tornando a linha invisível */
+    animation: expandLineFromCenter 2s forwards; /* Aplica a animação chamada 'expandLineFromCenter' com duração de 2 segundos e mantém o estado final */
+}
+
+@keyframes expandLineFromCenter {
+    from {
+        transform: scaleX(0); /* Começa a animação com escala horizontal de 0 */
+    }
+    to {
+        transform: scaleX(1); /* Termina a animação com escala horizontal de 1, expandindo a linha para sua largura total */
+    }
+}
+.input {
+    min-width: 280px; /* Define a largura mínima do input como 280px */
+    border-radius: 22px; /* Adiciona bordas arredondadas ao input */
+    border: 1px solid rgba(0, 0, 0, 0.603); /* Define uma borda com cor e transparência */
+    padding: 5px; /* Adiciona preenchimento interno de 5px */
+    margin: 0px 0px 12px -5px; /* Adiciona margem inferior de 12px e desloca a margem esquerda em -5px */
+}
+
+.input i {
+    font-size: 1.2em; /* Define o tamanho da fonte do ícone como 1.2 vezes o tamanho da fonte padrão */
+    position: absolute; /* Define o posicionamento absoluto do ícone dentro do input */
+    left: 25px; /* Posiciona o ícone a 25px da borda esquerda */
+    color: #d46810; /* Define a cor do ícone */
+}
+
+.input input {
+    width: 80%; /* Define a largura do input interno como 80% */
+    border: none; /* Remove a borda padrão do input */
+    outline: none; /* Remove o contorno ao redor do input quando focado */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Define a fonte do input */
+    transform: translateY(-4%); /* Move o input interno 4% para cima */
+    color: black; /* Define a cor do texto do input */
+    font-size: 12pt; /* Define o tamanho da fonte do input */
+}
+
+.btn {
+    margin-top: 10%; /* Adiciona uma margem superior de 10% */
+    width: 100%; /* Define a largura do botão como 100% */
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+.btn button {
+    color: #fff; /* Define a cor do texto do botão como branco */
+    width: 100%; /* Define a largura do botão como 100% */
+    height: 40px; /* Define a altura do botão como 40px */
+    background-image: linear-gradient(135deg, #FE6A58, #FFA357); /* Define um gradiente de fundo no botão */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Define a fonte do botão */
+    font-size: 12pt; /* Define o tamanho da fonte do botão */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 22px; /* Adiciona bordas arredondadas ao botão */
+    cursor: pointer; /* Muda o cursor para uma mãozinha quando passa sobre o botão */
+    outline: none; /* Remove o contorno ao redor do botão quando focado */
+    transition: 0.3s ease; /* Adiciona uma transição suave */
+    transform: 0.3s ease; /* Define a transformação suave */
+}
+
+.btn button:hover {
+    background-image: linear-gradient(135deg, #f8462f, #fc8b30); /* Altera o gradiente de fundo quando o botão é focado */
+    transform: translateY(-5px); /* Move o botão 5px para cima */
+}
