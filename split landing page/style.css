@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+h1{
+   font-size: 3.7rem;
+   color: white;
+   position: absolute;
+   left: 50%;
+   top: 20%;
+   transform: translate(-50%);
+   white-space: nowrap; /*usada para evitar que o texto dentro de um elemento quebre em várias linhas. Quando você aplica essa propriedade a um elemento, todo o texto dentro desse elemento será exibido em uma única linha, e o conteúdo não se quebrará, mesmo que ultrapasse os limites do contêiner.*/
+}
+.btn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 15rem;
+    padding: 10px;
+}
+.split.left .btn:hover{
+    background-color: rgba(4, 243, 4, 0.671);
+    transition: 0.5s ease;
+}
+.split.right .btn:hover{
+    background-color: rgba(0, 0, 255, 0.685);
+    transition: 0.5s ease;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(71, 71, 71);
+}
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.split.left{
+    left: 0;
+    background: url('img/playstation.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.split.left::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(32, 32, 187, 0.5);
+}
+.split.right {
+    right: 0;
+    background: url('img/xbox.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.split.right::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.733);
+}
+.split.right, .split.left, .split.right::before, .split.left::before{
+    transition: 1000ms ease;
+}
+
+.hover-left .left{
+    width: 75%;
+}
+.hover-left .right{
+    width: 25%;
+}
+.hover-right .right{
+    width: 75%;
+}
+.hover-right .left{
+    width: 25%;
+}
